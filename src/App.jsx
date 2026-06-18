@@ -1,297 +1,338 @@
-import React from "react";
-const pillars = [
+import React from 'react';
+
+const navGroups = [
   {
-    title: 'POS-Fintech',
-    text: 'Diem ban le thong minh, tich hop thanh toan va Loyalty da kenh.',
+    label: 'Sản phẩm',
+    items: ['Open-ERP Platform', 'POS & Face ID Engine', 'Embedded BI Portal', 'AI Suite'],
   },
   {
-    title: 'Chuoi cung ung',
-    text: 'Quan ly kho WMS, logistics va chuoi ban le lien mach tu nha may den tay khach hang.',
+    label: 'Dịch vụ',
+    items: [
+      'Tech Due Diligence',
+      'ERP/HRM Implementation',
+      'Data & AI Implementation',
+      'Digital Transformation Consulting',
+    ],
   },
   {
-    title: 'Enterprise Core',
-    text: 'Loi ERP mo rong, HRM, CRM giup quan tri toan dien nguon luc doanh nghiep.',
-  },
-  {
-    title: 'Data & AI',
-    text: 'Phan tich du lieu chuyen sau, AI Forecasting du bao nhu cau chinh xac.',
+    label: 'Case Study',
+    items: ['Dược Vương', 'Nam Phong', 'Masi', 'Care Solutions'],
   },
 ];
 
-const reasons = [
+const products = [
   {
-    title: 'End to End thuc su',
-    metric: '99.9%',
-    metricLabel: 'Uptime he thong lien tuc',
-    text: 'Thiet ke tron ven tu tu van, trien khai den van hanh, bao phu toan bo luong nghiep vu va giam phu thuoc he thong trung gian.',
+    title: 'Open-ERP Platform',
+    label: 'Enterprise Core',
+    text: 'Nền tảng quản trị mở kế thừa sức mạnh ERP hàng đầu, được MADX đóng gói module cho bán lẻ, sản xuất, thương mại và dược phẩm.',
+    points: ['Workflow linh hoạt', 'Open API', 'Module theo ngành'],
   },
   {
-    title: 'Thu nghiem an toan',
-    metric: '95%',
-    metricLabel: 'Giam loi khi Go-live',
-    text: 'Moi tinh nang duoc cau hinh va chay thu tren moi truong Sandbox mo phong quy trinh thuc te truoc khi dua vao van hanh.',
+    title: 'POS & Face ID Engine',
+    label: 'Retail AI',
+    text: 'Kết hợp POS thông minh và nhận diện khuôn mặt để tăng tốc giao dịch, định danh khách hàng, chấm công và giảm gian lận.',
+    points: ['Nhận diện < 0.5s', 'Tích hợp phần cứng', 'Vận hành đa điểm bán'],
   },
   {
-    title: 'IP doc quyen',
-    metric: '< 1s',
-    metricLabel: 'Dong bo du lieu real-time',
-    text: 'Cong nghe FaceID, AI Forecasting va cac mo hinh tich hop duoc MADX phat trien cho bai toan ban le, san xuat va phan phoi.',
+    title: 'Embedded BI Portal',
+    label: 'Data Experience',
+    text: 'Dashboard BI nhúng trực tiếp vào ERP, HRM, CRM, giúp cấp quản trị ra quyết định theo dữ liệu thời gian thực.',
+    points: ['Real-time KPI', 'Một nguồn dữ liệu', 'Dashboard theo vai trò'],
+  },
+  {
+    title: 'AI Suite',
+    label: 'Applied Intelligence',
+    text: 'Bộ giải pháp AI cho doanh nghiệp: forecasting, co-pilot, computer vision và tự động hóa tác vụ tri thức nội bộ.',
+    points: ['Forecasting', 'AI Co-pilot', 'Computer Vision'],
   },
 ];
 
-const partners = [
-  'Salesforce',
-  'SAP',
-  'Oracle',
-  'Odoo',
-  'Magento',
-  'Microsoft',
-  'IBM',
-  'Google Cloud',
-  'AWS',
-  'Adobe',
+const services = [
+  {
+    title: 'Tech Due Diligence',
+    text: 'Đánh giá kiến trúc, mã nguồn, bảo mật, hạ tầng và năng lực đội ngũ IT trước M&A, gọi vốn hoặc nâng cấp hệ thống.',
+  },
+  {
+    title: 'ERP/HRM Implementation',
+    text: 'Chuẩn hóa quy trình, cấu hình hệ thống, migration dữ liệu, UAT, go-live và chuyển giao vận hành.',
+  },
+  {
+    title: 'Data & AI Implementation',
+    text: 'Thiết kế data warehouse, ETL, BI dashboard và mô hình AI phục vụ dự báo, tự động hóa và phân tích vận hành.',
+  },
+  {
+    title: 'Digital Transformation Consulting',
+    text: 'Đánh giá trưởng thành số, xác định quick wins, lập roadmap 1-3 năm và quản trị thay đổi trong tổ chức.',
+  },
 ];
 
-const customers = [
-  'Tien Phat',
-  'Kim Long',
-  'CareVN',
-  'Altara',
-  'Nam Phong',
-  'Masi',
-  'Duoc Vuong',
-  'Elise',
-  'Lien Chau',
+const caseStudies = [
+  {
+    name: 'Dược Vương',
+    sector: 'Ecommerce / Pharma Distribution',
+    result: 'Giảm 80% thời gian kiểm kê, dữ liệu tồn kho chính xác 99.9%',
+  },
+  {
+    name: 'Nam Phong',
+    sector: 'Retail Canteen Chain',
+    result: 'Đồng bộ POS, tồn kho và doanh thu theo thời gian thực trên nhiều điểm bán',
+  },
+  {
+    name: 'Masi',
+    sector: 'Manufacturing ERP',
+    result: 'Chuẩn hóa mua hàng, kho, sản xuất, bán hàng và kế toán trên một nền tảng',
+  },
+  {
+    name: 'Care Solutions',
+    sector: 'HRM / Workforce Operations',
+    result: 'Tự động hóa chấm công, tính lương, dashboard nhân sự và dữ liệu tập trung',
+  },
 ];
 
-const posts = [
-  {
-    category: 'Ebook moi',
-    title: 'Cam nang xay dung he thong ERP cho chuoi >50 cua hang',
-    date: 'PDF 45 trang',
-  },
-  {
-    category: 'Ban le',
-    title: 'Tai sao POS truyen thong dang lam cham toc do mo rong chuoi?',
-    date: '15/05/2026',
-  },
-  {
-    category: 'AI & Data',
-    title: 'Ung dung AI Forecasting de giam 30% hang ton kho ao',
-    date: '10/05/2026',
-  },
-];
+const clients = ['Tiến Phát', 'Kim Long', 'CareVN', 'Altara', 'Nam Phong', 'Masi', 'Dược Vương', 'Elise', 'Liên Châu'];
 
 function App() {
   return (
-    <main className="site-shell">
-      <header className="header">
-        <a className="brand" href="#top" aria-label="MADX home">
-          <span className="brand-mark">M</span>
-          <span>MADX</span>
-        </a>
-        <nav className="nav" aria-label="Dieu huong chinh">
-          <a href="#solutions">Giai phap</a>
-          <a href="#why">Tai sao MADX</a>
-          <a href="#case">Case Study</a>
-          <a href="#resources">Tai nguyen</a>
-        </nav>
-        <a className="header-cta" href="#contact">
-          Tu van
-        </a>
+    <main className="min-h-screen overflow-hidden bg-[#f5f8fc] text-slate-950 antialiased">
+      <header className="fixed left-1/2 top-4 z-50 w-[min(1180px,calc(100%-24px))] -translate-x-1/2 rounded-xl border border-white/70 bg-white/85 px-3 py-3 shadow-[0_18px_60px_rgba(8,43,82,0.14)] backdrop-blur-2xl">
+        <div className="flex items-center justify-between gap-5">
+          <a href="#top" className="flex items-center gap-3" aria-label="MADX Home">
+            <img src="/madx-logo.jpg" alt="MADX" className="h-10 w-24 rounded-lg object-cover object-left" />
+          </a>
+
+          <nav className="hidden items-center gap-1 lg:flex" aria-label="Điều hướng chính">
+            {navGroups.map((group) => (
+              <a
+                key={group.label}
+                href={`#${group.label === 'Sản phẩm' ? 'products' : group.label === 'Dịch vụ' ? 'services' : 'case'}`}
+                className="rounded-lg px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-sky-50 hover:text-madx-blue"
+              >
+                {group.label}
+              </a>
+            ))}
+            <a className="rounded-lg px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-sky-50 hover:text-madx-blue" href="#contact">
+              Liên hệ
+            </a>
+          </nav>
+
+          <a
+            href="#contact"
+            className="inline-flex h-11 items-center justify-center rounded-lg bg-madx-blue px-5 text-sm font-bold text-white shadow-lg shadow-sky-800/20 transition hover:bg-sky-700"
+          >
+            Đặt lịch tư vấn
+          </a>
+        </div>
       </header>
 
-      <section id="top" className="hero section">
-        <div className="hero-copy">
-          <p className="eyebrow">Tong thau Chuyen doi so</p>
-          <h1>Nen tang so hoa chuoi gia tri cho doanh nghiep ban le va san xuat</h1>
-          <p className="hero-text">
-            MADX hop nhat San xuat, Kho, Thuong mai dien tu va Ban le tren mot
-            kien truc Open-ERP, giup doanh nghiep chuan hoa van hanh va tang toc
-            mo rong.
+      <section id="top" className="relative isolate bg-madx-deep pt-28 text-white">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_10%,rgba(35,183,229,0.34),transparent_34%),linear-gradient(135deg,#061f38_0%,#083b68_45%,#137dbb_100%)]" />
+        <div className="absolute inset-0 -z-10 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.12)_1px,transparent_1px)] [background-size:42px_42px]" />
+
+        <div className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-14 pb-20 pt-16 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-28">
+          <div>
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-sky-100 backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-cyan-300" />
+              Tổng thầu chuyển đổi số cho doanh nghiệp tăng trưởng
+            </div>
+            <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+              Thiết kế hạ tầng số cho bán lẻ, sản xuất và phân phối.
+            </h1>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-sky-50/82">
+              MADX hợp nhất ERP, POS, kho vận, dữ liệu và AI thành một kiến trúc vận hành end-to-end, giúp doanh nghiệp rời khỏi Excel rời rạc và quản trị bằng dữ liệu thời gian thực.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a className="inline-flex h-12 items-center justify-center rounded-lg bg-white px-6 text-sm font-black text-madx-blue transition hover:bg-sky-50" href="#products">
+                Khám phá nền tảng
+              </a>
+              <a className="inline-flex h-12 items-center justify-center rounded-lg border border-white/20 px-6 text-sm font-bold text-white transition hover:bg-white/10" href="#case">
+                Xem case triển khai
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-white/15 bg-white/10 p-4 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+            <div className="rounded-xl bg-[#071527] p-5">
+              <div className="mb-5 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-cyan-200">MADX Operations Cloud</p>
+                  <h2 className="mt-2 text-2xl font-black">Executive Cockpit</h2>
+                </div>
+                <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-bold text-emerald-200">Live</span>
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-3">
+                {[
+                  ['50.000+', 'giao dịch'],
+                  ['12.000+', 'đơn hàng'],
+                  ['99.9%', 'uptime'],
+                ].map(([value, label]) => (
+                  <div key={label} className="rounded-xl border border-white/10 bg-white/[0.06] p-4">
+                    <strong className="block text-2xl font-black text-white">{value}</strong>
+                    <span className="mt-1 block text-xs font-semibold text-slate-400">{label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                <div className="mb-4 flex items-center justify-between text-xs font-bold uppercase tracking-widest text-slate-400">
+                  <span>Data Pipeline</span>
+                  <span>ERP / POS / WMS / BI / AI</span>
+                </div>
+                <div className="grid grid-cols-4 gap-3">
+                  {[72, 118, 92, 150].map((height, index) => (
+                    <div key={height} className="flex h-40 items-end rounded-lg bg-white/[0.04] p-2">
+                      <div
+                        className="w-full rounded-md bg-gradient-to-t from-madx-blue to-madx-cyan shadow-lg shadow-cyan-900/20"
+                        style={{ height: `${height}px` }}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {['Open API', 'Sandbox UAT', 'AI Forecasting', 'FaceID Engine'].map((item) => (
+                  <div key={item} className="rounded-lg border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-bold text-sky-100">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-wrap justify-center gap-2 border-t border-white/10 py-6">
+          {clients.map((client) => (
+            <span key={client} className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-sky-50/80">
+              {client}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section id="products" className="mx-auto w-[min(1180px,calc(100%-32px))] py-24">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1fr] lg:items-end">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-madx-blue">Products</p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-madx-ink sm:text-5xl">Nền tảng công nghệ MADX sở hữu và triển khai sâu.</h2>
+          </div>
+          <p className="text-lg leading-8 text-slate-600">
+            Sitemap từ brief được gom lại thành 4 cụm sản phẩm chính. Mỗi cụm có thể tách thành landing page riêng ở bước tiếp theo.
           </p>
-          <div className="hero-actions">
-            <a className="button primary" href="#contact">
-              Dat lich tu van nganh
-            </a>
-            <a className="button ghost" href="#case">
-              Xem Case Study
-            </a>
-          </div>
         </div>
 
-        <div className="hero-visual" aria-label="Mo phong dashboard van hanh">
-          <img
-            src="https://violet-locust-380055.hostingersite.com/wp-content/uploads/2026/05/consulting-1.gif"
-            alt="Tu van chuyen doi so MADX"
-          />
-          <div className="stat-panel">
-            <span>Da xu ly hon</span>
-            <strong>50.000+</strong>
-            <span>giao dich</span>
-          </div>
-          <div className="dashboard-card">
-            <div>
-              <span>Open ERP</span>
-              <strong>12.000+ don hang</strong>
-            </div>
-            <div className="bars">
-              <i />
-              <i />
-              <i />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="logo-strip" aria-label="Khach hang tieu bieu">
-        {customers.map((name) => (
-          <span key={name}>{name}</span>
-        ))}
-      </section>
-
-      <section id="solutions" className="section split-heading">
-        <div>
-          <p className="eyebrow">4 Tru Cot Giai Phap</p>
-          <h2>Chuan hoa quy trinh, toi uu van hanh va thuc day tang truong</h2>
-        </div>
-        <p>
-          Tu diem ban, kho van, loi ERP den du lieu va AI, MADX xay dung mot he
-          sinh thai co the mo rong theo toc do tang truong cua doanh nghiep.
-        </p>
-      </section>
-
-      <section className="pillar-grid">
-        {pillars.map((pillar, index) => (
-          <article className="pillar-card" key={pillar.title}>
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{pillar.title}</h3>
-            <p>{pillar.text}</p>
-            <a href="#contact">Kham pha</a>
-          </article>
-        ))}
-      </section>
-
-      <section id="why" className="section why-section">
-        <div className="section-heading">
-          <p className="eyebrow">Tai sao MADX?</p>
-          <h2>Dong hanh tu thiet ke he thong den van hanh thuc te</h2>
-        </div>
-        <div className="reason-grid">
-          {reasons.map((reason) => (
-            <article className="reason-card" key={reason.title}>
-              <h3>{reason.title}</h3>
-              <p>{reason.text}</p>
-              <div>
-                <strong>{reason.metric}</strong>
-                <span>{reason.metricLabel}</span>
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
+          {products.map((product) => (
+            <article key={product.title} className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-950/10">
+              <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-black uppercase tracking-widest text-madx-blue">{product.label}</span>
+              <h3 className="mt-5 text-2xl font-black text-madx-ink">{product.title}</h3>
+              <p className="mt-4 leading-7 text-slate-600">{product.text}</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {product.points.map((point) => (
+                  <span key={point} className="rounded-lg bg-slate-100 px-3 py-2 text-sm font-bold text-slate-700">
+                    {point}
+                  </span>
+                ))}
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="case" className="section case-section">
-        <div className="case-media">
-          <span>Spotlight</span>
-          <strong>Duoc Vuong</strong>
-          <div className="play-button" aria-hidden="true">
-            Play
+      <section id="services" className="bg-white py-24">
+        <div className="mx-auto w-[min(1180px,calc(100%-32px))]">
+          <div className="max-w-3xl">
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-madx-blue">Services</p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-madx-ink sm:text-5xl">Không chỉ bán phần mềm. MADX chịu trách nhiệm cho kết quả vận hành.</h2>
+          </div>
+          <div className="mt-10 grid gap-4 lg:grid-cols-4">
+            {services.map((service, index) => (
+              <article key={service.title} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <span className="text-sm font-black text-madx-blue">{String(index + 1).padStart(2, '0')}</span>
+                <h3 className="mt-5 text-xl font-black text-madx-ink">{service.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600">{service.text}</p>
+              </article>
+            ))}
           </div>
         </div>
-        <div className="case-copy">
-          <p className="eyebrow">Case Study</p>
-          <h2>Cach Duoc Vuong so hoa toan dien chuoi cung ung Y te</h2>
-          <p>
-            Ap dung kien truc Open-ERP cua MADX, Duoc Vuong dong bo hoa du lieu
-            tu hang tram quay thuoc, tich hop POS va he thong quan ly kho trung
-            tam theo chuan GPP.
+      </section>
+
+      <section id="case" className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-8 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="rounded-3xl bg-madx-deep p-8 text-white shadow-2xl shadow-sky-950/20">
+          <p className="text-sm font-black uppercase tracking-[0.2em] text-cyan-200">Featured Case</p>
+          <h2 className="mt-4 text-4xl font-black tracking-tight">Dược Vương: số hóa chuỗi cung ứng dược phẩm.</h2>
+          <p className="mt-5 leading-8 text-sky-50/75">
+            MADX xây dựng hệ sinh thái tích hợp gồm B2B commerce, ERP, CRM, eInvoice, logistics partners và BI dashboard theo thời gian thực.
           </p>
-          <div className="case-stats">
-            <div>
-              <strong>80%</strong>
-              <span>Giam thoi gian kiem ke</span>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            <div className="rounded-2xl bg-white/10 p-5">
+              <strong className="text-3xl font-black">80%</strong>
+              <span className="mt-2 block text-sm font-semibold text-sky-100/80">giảm thời gian kiểm kê</span>
             </div>
-            <div>
-              <strong>99.9%</strong>
-              <span>Chinh xac ton kho real-time</span>
+            <div className="rounded-2xl bg-white/10 p-5">
+              <strong className="text-3xl font-black">99.9%</strong>
+              <span className="mt-2 block text-sm font-semibold text-sky-100/80">độ chính xác tồn kho</span>
             </div>
           </div>
-          <a className="button primary" href="#contact">
-            Xem case day du
-          </a>
         </div>
-      </section>
 
-      <section className="section partners">
-        <p className="eyebrow">He sinh thai doi tac</p>
-        <div>
-          {partners.map((partner) => (
-            <span key={partner}>{partner}</span>
-          ))}
-        </div>
-      </section>
-
-      <section className="section report-band">
-        <div>
-          <p className="eyebrow">Tech Due Diligence</p>
-          <h2>Danh gia ha tang IT/OT cua doanh nghiep ban</h2>
-          <p>
-            Nhan ban mau Tech Due Diligence Report giup phat hien lo hong va co
-            hoi toi uu chi phi cong nghe.
-          </p>
-        </div>
-        <a className="button light" href="#contact">
-          Tai Sample Report
-        </a>
-      </section>
-
-      <section id="resources" className="section resources">
-        <div className="split-heading">
-          <div>
-            <p className="eyebrow">Goc nhin & Tai nguyen</p>
-            <h2>Cap nhat xu huong cong nghe ban le moi nhat</h2>
-          </div>
-          <a href="#contact">Xem tat ca</a>
-        </div>
-        <div className="resource-grid">
-          {posts.map((post) => (
-            <article className="resource-card" key={post.title}>
-              <span>{post.category}</span>
-              <h3>{post.title}</h3>
-              <p>{post.date}</p>
+        <div className="grid gap-4">
+          {caseStudies.map((item) => (
+            <article key={item.name} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <h3 className="text-xl font-black text-madx-ink">{item.name}</h3>
+                <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-madx-blue">{item.sector}</span>
+              </div>
+              <p className="mt-3 leading-7 text-slate-600">{item.result}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="contact" className="section contact-section">
-        <div>
-          <p className="eyebrow">San sang so hoa chuoi gia tri?</p>
-          <h2>Doi ngu ky su va chuyen gia tu van cua MADX luon san sang.</h2>
-          <p>
-            Van phong: Tang 7 - Trung Tam Thuong Mai Giga Mall, 240-242 Pham Van
-            Dong, Phuong Hiep Binh, TP Ho Chi Minh
-          </p>
+      <section className="bg-[#071527] py-20 text-white">
+        <div className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-cyan-200">Sitemap direction</p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight">Kiến trúc website đề xuất từ brief.</h2>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {navGroups.map((group) => (
+              <div key={group.label} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
+                <h3 className="text-lg font-black">{group.label}</h3>
+                <ul className="mt-4 space-y-3 text-sm text-sky-50/75">
+                  {group.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-        <form className="contact-form">
-          <input type="text" placeholder="Ho va ten" aria-label="Ho va ten" />
-          <input type="email" placeholder="Email doanh nghiep" aria-label="Email doanh nghiep" />
-          <input type="tel" placeholder="So dien thoai" aria-label="So dien thoai" />
-          <button type="button">Lien he chuyen gia</button>
-        </form>
       </section>
 
-      <footer className="footer">
+      <section id="contact" className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-8 py-24 lg:grid-cols-[1fr_.72fr] lg:items-start">
         <div>
-          <strong>MADX</strong>
-          <p>Open-ERP, Omnichannel Retail, Du lieu & AI, Tech Due Diligence.</p>
+          <p className="text-sm font-black uppercase tracking-[0.2em] text-madx-blue">Contact</p>
+          <h2 className="mt-4 text-4xl font-black tracking-tight text-madx-ink sm:text-5xl">Sẵn sàng thiết kế lại hệ vận hành số?</h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            Văn phòng: Tầng 7 - Trung Tâm Thương Mại Giga Mall, 240-242 Phạm Văn Đồng, Phường Hiệp Bình, TP Hồ Chí Minh.
+          </p>
+          <div className="mt-8 grid gap-3 text-sm font-semibold text-slate-600">
+            <span>Email: Cs@masi.vn</span>
+            <span>Call Center: 0909 411 885 | 0911 401 955 | 0979 045 766</span>
+          </div>
         </div>
-        <div>
-          <span>Email: Cs@masi.vn</span>
-          <span>Call Center: 0909 411 885 | 0911 401 955 | 0979 045 766</span>
-        </div>
-      </footer>
+        <form className="rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl shadow-sky-950/10">
+          <div className="grid gap-4">
+            <input className="h-12 rounded-lg border border-slate-200 px-4 outline-none transition focus:border-madx-blue focus:ring-4 focus:ring-sky-100" placeholder="Họ và tên" type="text" />
+            <input className="h-12 rounded-lg border border-slate-200 px-4 outline-none transition focus:border-madx-blue focus:ring-4 focus:ring-sky-100" placeholder="Email doanh nghiệp" type="email" />
+            <input className="h-12 rounded-lg border border-slate-200 px-4 outline-none transition focus:border-madx-blue focus:ring-4 focus:ring-sky-100" placeholder="Số điện thoại" type="tel" />
+            <button className="h-12 rounded-lg bg-madx-blue font-black text-white shadow-lg shadow-sky-800/20 transition hover:bg-sky-700" type="button">
+              Liên hệ chuyên gia
+            </button>
+          </div>
+        </form>
+      </section>
     </main>
   );
 }
