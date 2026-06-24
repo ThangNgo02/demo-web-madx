@@ -101,7 +101,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-display font-bold text-sm text-brand-deep">Hòm thư điện tử</h3>
                   <p className="mt-1.5 text-xs text-slate-500 font-semibold">
-                    <a href="mailto:Cs@madx.vn" className="hover:text-brand-blue transition">Cs@madx.vn</a>
+                    <a href="mailto:cs@madx.com.vn" className="hover:text-brand-blue transition">cs@madx.com.vn</a>
                   </p>
                 </div>
               </div>

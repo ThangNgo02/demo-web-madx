@@ -163,7 +163,7 @@ export default function MainLayout() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail className="h-4 w-4 shrink-0 text-brand-blue-light" />
-                  <a href="mailto:Cs@madx.vn" className="transition hover:text-white">Cs@madx.vn</a>
+                  <a href="mailto:cs@madx.com.vn" className="transition hover:text-white">cs@madx.com.vn</a>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Phone className="h-4 w-4 shrink-0 text-brand-blue-light mt-1" />

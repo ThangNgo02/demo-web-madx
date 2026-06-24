@@ -174,11 +174,10 @@ export default function LandingPage() {
               <a
                 key={s.id}
                 onClick={() => scrollTo(s.id)}
-                className={`relative cursor-pointer rounded-xl px-3 py-2.5 text-sm font-semibold transition duration-200 ${
-                  isHeaderScrolled
+                className={`relative cursor-pointer rounded-xl px-3 py-2.5 text-sm font-semibold transition duration-200 ${isHeaderScrolled
                     ? (activeSection === s.id ? 'text-brand-blue bg-brand-blue/5' : 'text-slate-600 hover:text-brand-blue hover:bg-slate-100/50')
                     : (activeSection === s.id ? 'text-brand-cyan bg-white/[0.08]' : 'text-slate-300 hover:text-white hover:bg-white/[0.05]')
-                }`}
+                  }`}
               >
                 {s.name}
                 {activeSection === s.id && (
@@ -191,11 +190,10 @@ export default function LandingPage() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               onClick={() => scrollTo('contact')}
-              className={`group cursor-pointer inline-flex h-11 items-center justify-center gap-1.5 rounded-xl px-5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl ${
-                isHeaderScrolled
+              className={`group cursor-pointer inline-flex h-11 items-center justify-center gap-1.5 rounded-xl px-5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:shadow-xl ${isHeaderScrolled
                   ? 'bg-brand-blue shadow-brand-blue/20 hover:bg-brand-blue-dark hover:shadow-brand-blue/30'
                   : 'bg-gradient-to-r from-brand-blue to-brand-cyan shadow-brand-blue/25 hover:shadow-brand-cyan/30 hover:brightness-110'
-              }`}
+                }`}
             >
               Đặt lịch tư vấn
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -235,19 +233,13 @@ export default function LandingPage() {
 
         <div className="mx-auto grid w-[min(1280px,calc(100%-32px))] gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="flex flex-col items-start">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold text-brand-cyan backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-brand-cyan animate-pulse" />
-                Tổng thầu chuyển đổi số cho doanh nghiệp bán lẻ & sản xuất
-              </div>
-            </motion.div>
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }} className="font-display font-extrabold tracking-tight text-balance">
               <div className="block text-xl sm:text-2xl lg:text-3xl leading-[1.15] text-white mb-3">
-                Tổng thầu Chuyển đổi số cho Doanh nghiệp 
+                Tổng thầu Chuyển đổi số cho Doanh nghiệp
               </div>
-              
+
               <div className="block text-3xl sm:text-4xl lg:text-5xl leading-[1.2] text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-blue">
-                 Bán lẻ & Sản xuất Việt Nam
+                Bán lẻ & Sản xuất Việt Nam
               </div>
             </motion.h1>
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }} className="mt-6 text-[16px] leading-relaxed text-slate-300 max-w-xl text-balance">
@@ -258,9 +250,6 @@ export default function LandingPage() {
                 Đặt lịch tư vấn ngành (30 phút miễn phí)
                 <ArrowRight className="h-4.5 w-4.5" />
               </a>
-              <a onClick={() => scrollTo('case-studies')} className="cursor-pointer inline-flex h-12 items-center justify-center rounded-xl border border-white/15 bg-white/5 px-6 font-bold text-slate-200 transition-all duration-300 hover:bg-white/10 hover:text-white hover:border-white/30">
-                Xem dự án tiêu biểu
-              </a>
             </motion.div>
           </div>
 
@@ -268,7 +257,7 @@ export default function LandingPage() {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }} className="relative">
             {/* Glow background */}
             <div className="absolute -inset-8 bg-gradient-to-tr from-brand-cyan/20 via-transparent to-brand-blue/20 blur-3xl rounded-full opacity-40" />
-            
+
             <div className="relative">
               {/* Central Hub */}
               <div className="relative flex items-center justify-center">
@@ -290,12 +279,12 @@ export default function LandingPage() {
                       <stop offset="100%" stopColor="rgba(255,255,255,0.05)" />
                     </linearGradient>
                     <filter id="glow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                      <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
                     </filter>
                     <filter id="glowStrong">
-                      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-                      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                      <feGaussianBlur stdDeviation="8" result="coloredBlur" />
+                      <feMerge><feMergeNode in="coloredBlur" /><feMergeNode in="SourceGraphic" /></feMerge>
                     </filter>
                   </defs>
 
@@ -486,10 +475,10 @@ export default function LandingPage() {
                 { iconBg: 'bg-emerald-500', iconColor: 'text-white', ring: 'group-hover:ring-emerald-500/10' }
               ];
               const iconPaths = [
-                <><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></>, 
-                <><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></>, 
-                <><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="22" y1="12" x2="16" y2="12" /><line x1="12" y1="2" x2="12" y2="8" /><line x1="12" y1="16" x2="12" y2="22" /><line x1="2" y1="12" x2="8" y2="12" /></>, 
-                <><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></> 
+                <><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></>,
+                <><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></>,
+                <><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="4" /><line x1="22" y1="12" x2="16" y2="12" /><line x1="12" y1="2" x2="12" y2="8" /><line x1="12" y1="16" x2="12" y2="22" /><line x1="2" y1="12" x2="8" y2="12" /></>,
+                <><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></>
               ];
               return industrySolutions.map((sol, idx) => {
                 const theme = cardThemes[idx % cardThemes.length];
@@ -501,11 +490,11 @@ export default function LandingPage() {
                           {iconPaths[idx % iconPaths.length]}
                         </svg>
                       </div>
-                      
+
                       <h3 className="font-display text-[20px] font-bold text-brand-deep mb-4 leading-snug group-hover:text-brand-blue transition-colors">
                         {sol.title}
                       </h3>
-                      
+
                       <p className="text-[14px] leading-relaxed text-slate-500">
                         {sol.hero}
                       </p>
@@ -553,17 +542,17 @@ export default function LandingPage() {
                 'from-violet-500 to-purple-400',
                 'from-pink-500 to-rose-400'
               ];
-              
+
               return products.slice(0, 4).map((product, idx) => {
                 const Icon = productIcons[product.id] || Layers;
                 const grad = gradients[idx % gradients.length];
-                
+
                 return (
                   <FadeInUp key={product.id} delay={(idx % 2 + 1) * 0.1} className="group relative rounded-3xl bg-white border border-slate-100 p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    
+
                     {/* Subtle Gradient Glow in Background */}
                     <div className={`absolute -right-20 -top-20 h-40 w-40 rounded-full bg-gradient-to-br ${grad} opacity-5 group-hover:opacity-10 transition-opacity blur-3xl`} />
-                    
+
                     <div className="relative z-10 flex-1">
                       <div className="flex items-start justify-between mb-6">
                         <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${grad} text-white shadow-lg shadow-brand-blue/10 group-hover:scale-110 transition-transform`}>
@@ -573,26 +562,26 @@ export default function LandingPage() {
                           {product.label}
                         </span>
                       </div>
-                      
+
                       <h3 className="font-display text-[22px] font-extrabold text-brand-deep group-hover:text-brand-blue transition-colors leading-snug">
                         {product.title}
                       </h3>
-                      
+
                       <p className="mt-3 text-[14px] leading-relaxed text-slate-500 line-clamp-2">
                         {product.text}
                       </p>
-                      
+
 
                     </div>
-                    
+
                     <div className="relative z-10 mt-8 pt-5 border-t border-slate-100 flex items-center justify-between gap-4">
                       <div className="flex items-center gap-2.5 text-[12px] font-medium text-slate-400 min-w-0 flex-1">
                         <span className="flex shrink-0 items-center justify-center h-6 w-6 rounded-full bg-slate-50 text-slate-400 border border-slate-100">
-                           <Users className="h-3 w-3" />
+                          <Users className="h-3 w-3" />
                         </span>
                         <span className="truncate">Khách hàng: <span className="text-slate-600 font-bold">{product.keyClients.slice(0, 2).join(', ')}</span></span>
                       </div>
-                      
+
                       <a onClick={() => scrollTo('contact')} className="cursor-pointer shrink-0 inline-flex items-center gap-1.5 text-[13px] font-bold text-brand-blue hover:text-brand-blue-dark transition-all group-hover:gap-2">
                         Chi tiết <ArrowRight className="h-4 w-4" />
                       </a>
@@ -655,7 +644,7 @@ export default function LandingPage() {
                       <p className="mt-3 text-[14px] leading-relaxed text-slate-500">
                         {service.problem}
                       </p>
-                      
+
                       {/* Learn More link inline */}
                       <a onClick={() => scrollTo('contact')} className={`mt-5 cursor-pointer inline-flex items-center gap-1.5 text-[13px] font-bold ${style.color} opacity-80 hover:opacity-100 transition-all`}>
                         Tìm hiểu thêm <ChevronRight className="h-4 w-4" />
@@ -670,123 +659,7 @@ export default function LandingPage() {
       </section>
 
 
-      {/* ═══════════════════════════════ CASE STUDIES ═══════════════════════════════ */}
-      <section id="case-studies" className="scroll-mt-28 py-20 bg-white border-t border-slate-200/60">
-        <div className="mx-auto w-[min(1280px,calc(100%-32px))]">
-          <FadeInUp>
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-blue">Dự án tiêu biểu</span>
-              <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-brand-deep sm:text-4xl">
-                Câu chuyện Khách hàng Thành công
-              </h2>
-              <p className="mt-4 text-base text-slate-600">
-                Hơn 9 dự án chuyển đổi số thực tế đã go-live, mang lại hiệu quả trực tiếp cho hoạt động kinh doanh.
-              </p>
-            </div>
-          </FadeInUp>
 
-          {/* Featured: Dược Vương */}
-          {duocVuong && (
-            <FadeInUp delay={0.1} className="overflow-hidden rounded-3xl border border-slate-200 bg-brand-deep text-white shadow-xl mb-10">
-              <div className="grid lg:grid-cols-2">
-                <div className="p-8 sm:p-10 flex flex-col justify-center">
-                  <span className="rounded-full bg-brand-cyan/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-cyan w-fit">
-                    Case Study tiêu biểu: Dược Vương
-                  </span>
-                  <h3 className="mt-5 font-display text-2xl font-extrabold tracking-tight">
-                    Chuyển đổi số chuỗi cung ứng & phân phối dược phẩm
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">
-                    Hợp nhất cổng B2B Giá Thuốc Tốt với hệ thống quản trị kho WMS Core + ERP nội bộ, giảm thiểu tối đa quy trình thủ công.
-                  </p>
-                  <div className="mt-6 grid gap-4 grid-cols-3">
-                    {duocVuong.highlights.map((h, i) => (
-                      <div key={i} className="rounded-2xl bg-white/5 border border-white/5 p-3 text-center">
-                        <strong className="block text-xl font-extrabold text-brand-cyan">{h.value}</strong>
-                        <span className="mt-1 block text-[9px] text-slate-400 font-bold uppercase tracking-wide">{h.label}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="relative bg-[#0c1f44] p-8 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/5 min-h-[280px]">
-                  <div className="absolute inset-0 -z-10 opacity-30 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.15),transparent_70%)]" />
-                  <div className="text-center">
-                    <div className="h-14 w-14 mx-auto rounded-full bg-brand-cyan/15 flex items-center justify-center text-brand-cyan mb-4 border border-brand-cyan/20 animate-pulse">
-                      <Play className="h-6 w-6 fill-current ml-0.5" />
-                    </div>
-                    <span className="text-xs text-slate-400 font-semibold">Video walkthrough WMS Dược Vương</span>
-                  </div>
-                </div>
-              </div>
-            </FadeInUp>
-          )}
-
-          {/* Case Study Grid */}
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {(() => {
-              const cardStyles = [
-                { borderColor: '#8b5cf6', iconBg: '#f3f0ff', iconColor: '#7c3aed', statBg: 'linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)', statColor: '#6d28d9', arrow: '↗' },
-                { borderColor: '#10b981', iconBg: '#ecfdf5', iconColor: '#059669', statBg: 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)', statColor: '#047857', arrow: '↗' },
-                { borderColor: '#f59e0b', iconBg: '#fffbeb', iconColor: '#d97706', statBg: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)', statColor: '#b45309', arrow: '↗' },
-                { borderColor: '#3b82f6', iconBg: '#eff6ff', iconColor: '#2563eb', statBg: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)', statColor: '#1d4ed8', arrow: '↗' },
-                { borderColor: '#ec4899', iconBg: '#fdf2f8', iconColor: '#db2777', statBg: 'linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%)', statColor: '#be185d', arrow: '↗' },
-                { borderColor: '#f97316', iconBg: '#fff7ed', iconColor: '#ea580c', statBg: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)', statColor: '#c2410c', arrow: '↗' },
-              ];
-              const iconPaths = [
-                <><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></>,
-                <><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></>,
-                <><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></>,
-                <><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" /><line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" /></>,
-                <><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></>,
-                <><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></>,
-              ];
-              return caseStudies.filter(c => c.id !== 'duoc-vuong').slice(0, 6).map((item, idx) => {
-                const s = cardStyles[idx % cardStyles.length];
-                return (
-                  <FadeInUp
-                    key={item.id}
-                    delay={(idx % 3 + 1) * 0.1}
-                    className="group relative flex flex-col justify-between rounded-2xl bg-white p-6 border border-slate-200/80 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg"
-                    style={{
-                      borderLeft: `3px solid ${s.borderColor}`,
-                    }}
-                    onMouseEnter={e => e.currentTarget.style.borderColor = s.borderColor}
-                    onMouseLeave={e => { e.currentTarget.style.borderColor = ''; e.currentTarget.style.borderLeft = `3px solid ${s.borderColor}`; }}
-                  >
-                    <div>
-                      {/* Icon */}
-                      <div
-                        className="flex h-11 w-11 items-center justify-center rounded-xl mb-4"
-                        style={{ backgroundColor: s.iconBg }}
-                      >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={s.iconColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          {iconPaths[idx % iconPaths.length]}
-                        </svg>
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="font-display text-[15px] font-extrabold text-brand-deep group-hover:text-brand-blue transition leading-snug">
-                        {item.name}
-                      </h3>
-
-                      {/* Sector Tag */}
-                      <span className="inline-block mt-1.5 text-[10px] font-semibold tracking-wide uppercase" style={{ color: s.iconColor, opacity: 0.8 }}>
-                        {item.sector}
-                      </span>
-
-                      {/* Description */}
-                      <p className="mt-2 text-[11.5px] text-slate-500 leading-[1.65] line-clamp-2">
-                        {item.challenge[0]}
-                      </p>
-                    </div>
-
-                  </FadeInUp>
-                );
-              });
-            })()}
-          </div>
-        </div>
-      </section>
 
 
       {/* ═══════════════════════════════ ABOUT / WHY CHOOSE US ═══════════════════════════════ */}
@@ -798,7 +671,7 @@ export default function LandingPage() {
               <h2 className="font-display text-3xl font-extrabold tracking-tight text-brand-deep sm:text-4xl mb-8">
                 Tại sao bạn nên chọn chúng tôi
               </h2>
-              
+
               <div className="space-y-8">
                 {/* Item 1 */}
                 <div className="flex gap-4 items-start">
@@ -810,7 +683,7 @@ export default function LandingPage() {
                     <p className="text-[14px] leading-relaxed text-slate-500">Đội ngũ của chúng tôi được hình thành từ những nhà phát triển giàu kinh nghiệm, với hơn 10 năm phát triển các dự án tại thị trường Mỹ và Châu Á.</p>
                   </div>
                 </div>
-                
+
                 {/* Item 2 */}
                 <div className="flex gap-4 items-start">
                   <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-orange-500 text-white">
@@ -832,14 +705,14 @@ export default function LandingPage() {
                     <p className="text-[14px] leading-relaxed text-slate-500">Chúng tôi tin tưởng rằng thành công của khách hàng là chìa khóa cho sự phát triển của MADX. Và chúng tôi sẽ luôn mang đến những giải pháp tối ưu nhất.</p>
                   </div>
                 </div>
-                
+
               </div>
-            <div className='ml-8'>
-              <a onClick={() => scrollTo('contact')} className="mt-10 group cursor-pointer inline-flex items-center gap-2 text-[15px] font-bold text-indigo-500 hover:text-indigo-600 transition-all">
-                Liên hệ chuyên gia <ArrowRight className="h-4.5 w-4.5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-             
+              <div className='ml-8'>
+                <a onClick={() => scrollTo('contact')} className="mt-10 group cursor-pointer inline-flex items-center gap-2 text-[15px] font-bold text-indigo-500 hover:text-indigo-600 transition-all">
+                  Liên hệ chuyên gia <ArrowRight className="h-4.5 w-4.5 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+
             </div>
 
             {/* Right Illustration placeholder */}
@@ -848,10 +721,10 @@ export default function LandingPage() {
                 {/* Decorative Elements */}
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.5),transparent_70%)]" />
                 <div className="grid grid-cols-2 gap-6 relative z-10">
-                   <div className="bg-white p-6 rounded-3xl shadow-xl transform -rotate-6 hover:rotate-0 transition-transform"><Cpu className="h-12 w-12 text-indigo-500" /></div>
-                   <div className="bg-white p-6 rounded-3xl shadow-xl transform rotate-6 hover:rotate-0 transition-transform mt-8"><Database className="h-12 w-12 text-orange-500" /></div>
-                   <div className="bg-white p-6 rounded-3xl shadow-xl transform -rotate-3 hover:rotate-0 transition-transform"><Layers className="h-12 w-12 text-emerald-500" /></div>
-                   <div className="bg-white p-6 rounded-3xl shadow-xl transform rotate-3 hover:rotate-0 transition-transform mt-8"><Globe className="h-12 w-12 text-cyan-500" /></div>
+                  <div className="bg-white p-6 rounded-3xl shadow-xl transform -rotate-6 hover:rotate-0 transition-transform"><Cpu className="h-12 w-12 text-indigo-500" /></div>
+                  <div className="bg-white p-6 rounded-3xl shadow-xl transform rotate-6 hover:rotate-0 transition-transform mt-8"><Database className="h-12 w-12 text-orange-500" /></div>
+                  <div className="bg-white p-6 rounded-3xl shadow-xl transform -rotate-3 hover:rotate-0 transition-transform"><Layers className="h-12 w-12 text-emerald-500" /></div>
+                  <div className="bg-white p-6 rounded-3xl shadow-xl transform rotate-3 hover:rotate-0 transition-transform mt-8"><Globe className="h-12 w-12 text-cyan-500" /></div>
                 </div>
               </div>
             </div>
@@ -859,86 +732,86 @@ export default function LandingPage() {
 
           {/* Bottom part: Progress Circles (Image 2 style) */}
           <div className="pt-20 border-t border-slate-100">
-             <div className="text-center mb-16">
-               <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-blue">MADX Solutions</span>
-               <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-brand-deep sm:text-4xl">
-                 Đồng hành cùng mỗi doanh nghiệp
-               </h2>
-             </div>
-             
-             <div className="grid gap-12 md:grid-cols-3">
-               {/* Circle 1 */}
-               <div className="flex flex-col items-center text-center">
-                 <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-[6px] border-indigo-50 mb-6 shadow-inner">
-                    <svg className="absolute inset-0 h-full w-full -rotate-90 transform" viewBox="0 0 100 100">
-                      <motion.circle 
-                        cx="50" cy="50" r="46" fill="transparent" stroke="#6366f1" strokeWidth="8" 
-                        strokeDasharray="289" 
-                        initial={{ strokeDashoffset: 289 }}
-                        whileInView={{ strokeDashoffset: 49 }}
-                        transition={{ duration: 2.5, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <span className="font-display text-3xl font-extrabold text-indigo-500">
-                      <CountUp end={83} duration={2.5} enableScrollSpy scrollSpyOnce />%
-                    </span>
-                 </div>
-                 <h3 className="text-lg font-bold text-indigo-600 mb-3">Tăng hiệu quả hoạt động kinh doanh</h3>
-                 <p className="text-[13px] leading-relaxed text-slate-500">
-                   Được thành lập với sứ mệnh chuyển đổi số, MADX nhanh chóng giúp các công ty gia công, sản xuất sáng tạo quy trình.
-                 </p>
-               </div>
+            <div className="text-center mb-16">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-brand-blue">MADX Solutions</span>
+              <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-brand-deep sm:text-4xl">
+                Đồng hành cùng mỗi doanh nghiệp
+              </h2>
+            </div>
 
-               {/* Circle 2 */}
-               <div className="flex flex-col items-center text-center">
-                 <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-[6px] border-orange-50 mb-6 shadow-inner">
-                    <svg className="absolute inset-0 h-full w-full -rotate-90 transform" viewBox="0 0 100 100">
-                      <motion.circle 
-                        cx="50" cy="50" r="46" fill="transparent" stroke="#f97316" strokeWidth="8" 
-                        strokeDasharray="289" 
-                        initial={{ strokeDashoffset: 289 }}
-                        whileInView={{ strokeDashoffset: 31 }}
-                        transition={{ duration: 2.5, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <span className="font-display text-3xl font-extrabold text-orange-500">
-                      <CountUp end={89} duration={2.5} enableScrollSpy scrollSpyOnce />%
-                    </span>
-                 </div>
-                 <h3 className="text-lg font-bold text-orange-600 mb-3">Xây dựng được uy tín và thương hiệu</h3>
-                 <p className="text-[13px] leading-relaxed text-slate-500">
-                   Đội ngũ của chúng tôi bao gồm các nhà phát triển kinh nghiệm thực chiến từ các dự án lớn tại Châu Á và Mỹ.
-                 </p>
-               </div>
+            <div className="grid gap-12 md:grid-cols-3">
+              {/* Circle 1 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-[6px] border-indigo-50 mb-6 shadow-inner">
+                  <svg className="absolute inset-0 h-full w-full -rotate-90 transform" viewBox="0 0 100 100">
+                    <motion.circle
+                      cx="50" cy="50" r="46" fill="transparent" stroke="#6366f1" strokeWidth="8"
+                      strokeDasharray="289"
+                      initial={{ strokeDashoffset: 289 }}
+                      whileInView={{ strokeDashoffset: 49 }}
+                      transition={{ duration: 2.5, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <span className="font-display text-3xl font-extrabold text-indigo-500">
+                    <CountUp end={83} duration={2.5} enableScrollSpy scrollSpyOnce />%
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-indigo-600 mb-3">Tăng hiệu quả hoạt động kinh doanh</h3>
+                <p className="text-[13px] leading-relaxed text-slate-500">
+                  Được thành lập với sứ mệnh chuyển đổi số, MADX nhanh chóng giúp các công ty gia công, sản xuất sáng tạo quy trình.
+                </p>
+              </div>
 
-               {/* Circle 3 */}
-               <div className="flex flex-col items-center text-center">
-                 <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-[6px] border-emerald-50 mb-6 shadow-inner">
-                    <svg className="absolute inset-0 h-full w-full -rotate-90 transform" viewBox="0 0 100 100">
-                      <motion.circle 
-                        cx="50" cy="50" r="46" fill="transparent" stroke="#10b981" strokeWidth="8" 
-                        strokeDasharray="289" 
-                        initial={{ strokeDashoffset: 289 }}
-                        whileInView={{ strokeDashoffset: 28 }}
-                        transition={{ duration: 2.5, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <span className="font-display text-3xl font-extrabold text-emerald-500">
-                      <CountUp end={90} duration={2.5} enableScrollSpy scrollSpyOnce />%
-                    </span>
-                 </div>
-                 <h3 className="text-lg font-bold text-emerald-600 mb-3">Công nghệ và ngôn ngữ tối ưu nhất</h3>
-                 <p className="text-[13px] leading-relaxed text-slate-500">
-                   Chúng tôi luôn sử dụng các công nghệ và ngôn ngữ lập trình tối ưu nhất cho khách hàng, đảm bảo hệ thống hoạt động nhanh và hiệu quả.
-                 </p>
-               </div>
-             </div>
+              {/* Circle 2 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-[6px] border-orange-50 mb-6 shadow-inner">
+                  <svg className="absolute inset-0 h-full w-full -rotate-90 transform" viewBox="0 0 100 100">
+                    <motion.circle
+                      cx="50" cy="50" r="46" fill="transparent" stroke="#f97316" strokeWidth="8"
+                      strokeDasharray="289"
+                      initial={{ strokeDashoffset: 289 }}
+                      whileInView={{ strokeDashoffset: 31 }}
+                      transition={{ duration: 2.5, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <span className="font-display text-3xl font-extrabold text-orange-500">
+                    <CountUp end={89} duration={2.5} enableScrollSpy scrollSpyOnce />%
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-orange-600 mb-3">Xây dựng được uy tín và thương hiệu</h3>
+                <p className="text-[13px] leading-relaxed text-slate-500">
+                  Đội ngũ của chúng tôi bao gồm các nhà phát triển kinh nghiệm thực chiến từ các dự án lớn tại Châu Á và Mỹ.
+                </p>
+              </div>
+
+              {/* Circle 3 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-[6px] border-emerald-50 mb-6 shadow-inner">
+                  <svg className="absolute inset-0 h-full w-full -rotate-90 transform" viewBox="0 0 100 100">
+                    <motion.circle
+                      cx="50" cy="50" r="46" fill="transparent" stroke="#10b981" strokeWidth="8"
+                      strokeDasharray="289"
+                      initial={{ strokeDashoffset: 289 }}
+                      whileInView={{ strokeDashoffset: 28 }}
+                      transition={{ duration: 2.5, ease: "easeOut" }}
+                      viewport={{ once: true }}
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                  <span className="font-display text-3xl font-extrabold text-emerald-500">
+                    <CountUp end={90} duration={2.5} enableScrollSpy scrollSpyOnce />%
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-emerald-600 mb-3">Công nghệ và ngôn ngữ tối ưu nhất</h3>
+                <p className="text-[13px] leading-relaxed text-slate-500">
+                  Chúng tôi luôn sử dụng các công nghệ và ngôn ngữ lập trình tối ưu nhất cho khách hàng, đảm bảo hệ thống hoạt động nhanh và hiệu quả.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1028,7 +901,7 @@ export default function LandingPage() {
               {/* Decorative shapes */}
               <div className="absolute top-0 right-0 -mr-20 -mt-20 h-72 w-72 rounded-full bg-brand-blue opacity-30 blur-[80px]" />
               <div className="absolute bottom-0 left-0 -ml-20 -mb-20 h-72 w-72 rounded-full bg-emerald-500 opacity-20 blur-[80px]" />
-              
+
               <div className="relative z-10">
                 <span className="inline-flex h-8 items-center rounded-full bg-white/10 px-4 text-[11px] font-bold uppercase tracking-[0.25em] text-brand-cyan backdrop-blur-md border border-white/10">
                   Liên Hệ
@@ -1041,40 +914,7 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="relative z-10 mt-16 space-y-8">
-                <div className="flex items-start gap-5 group cursor-pointer">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/5 transition-colors group-hover:bg-brand-blue group-hover:border-brand-blue">
-                    <MapPin className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-[16px] text-white">Trụ sở chính</h3>
-                    <p className="mt-1.5 text-[14px] leading-relaxed text-slate-300">Tầng 7, TTTM Giga Mall, 240-242 Phạm Văn Đồng, TP. Thủ Đức, TP. Hồ Chí Minh</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-5 group cursor-pointer">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/5 transition-colors group-hover:bg-brand-blue group-hover:border-brand-blue">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-[16px] text-white">Đường dây nóng</h3>
-                    <div className="mt-1.5 flex gap-4 text-[14px] text-slate-300 font-medium">
-                      <a href="tel:0909411885" className="hover:text-white transition">0909 411 885</a>
-                      <a href="tel:0911401955" className="hover:text-white transition">0911 401 955</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-5 group cursor-pointer">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm border border-white/5 transition-colors group-hover:bg-brand-blue group-hover:border-brand-blue">
-                    <Mail className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-[16px] text-white">Email</h3>
-                    <a href="mailto:Cs@madx.vn" className="mt-1.5 block text-[14px] text-slate-300 font-medium hover:text-white transition">Cs@madx.vn</a>
-                  </div>
-                </div>
-              </div>
+              
             </div>
 
             {/* Right Panel - Form */}
@@ -1096,7 +936,7 @@ export default function LandingPage() {
                     <h3 className="font-display text-2xl font-extrabold text-brand-deep">Gửi yêu cầu tư vấn</h3>
                     <p className="mt-2 text-[15px] text-slate-500">Vui lòng điền đầy đủ các thông tin bên dưới để chúng tôi hỗ trợ tốt nhất.</p>
                   </div>
-                  
+
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="c-name" className="text-[13px] font-bold text-brand-deep">Họ và tên *</label>
@@ -1107,7 +947,7 @@ export default function LandingPage() {
                       <input required type="tel" id="c-phone" value={contactForm.phone} onChange={e => setContactForm(p => ({ ...p, phone: e.target.value }))} placeholder="0909xxxxxx" className="h-14 rounded-xl border border-slate-200 bg-transparent px-5 text-[15px] outline-none transition placeholder:text-slate-400 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5" />
                     </div>
                   </div>
-                  
+
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="c-email" className="text-[13px] font-bold text-brand-deep">Email doanh nghiệp *</label>
@@ -1118,7 +958,7 @@ export default function LandingPage() {
                       <input required type="text" id="c-company" value={contactForm.company} onChange={e => setContactForm(p => ({ ...p, company: e.target.value }))} placeholder="Công ty TNHH MADX" className="h-14 rounded-xl border border-slate-200 bg-transparent px-5 text-[15px] outline-none transition placeholder:text-slate-400 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5" />
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col gap-2">
                     <label htmlFor="c-interest" className="text-[13px] font-bold text-brand-deep">Nhu cầu tư vấn *</label>
                     <select required id="c-interest" value={contactForm.interest} onChange={e => setContactForm(p => ({ ...p, interest: e.target.value }))} className="h-14 rounded-xl border border-slate-200 bg-transparent px-5 text-[15px] outline-none transition focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 text-slate-700">
@@ -1132,12 +972,12 @@ export default function LandingPage() {
                       <option value="Yêu cầu khác / Tư vấn chung">Yêu cầu khác / Tư vấn chung</option>
                     </select>
                   </div>
-                  
+
                   <div className="flex flex-col gap-2">
                     <label htmlFor="c-message" className="text-[13px] font-bold text-brand-deep">Chi tiết yêu cầu</label>
                     <textarea id="c-message" rows={4} value={contactForm.message} onChange={e => setContactForm(p => ({ ...p, message: e.target.value }))} placeholder="Chia sẻ quy mô nhân sự, phần mềm đang sử dụng, hoặc nút thắt vận hành chính..." className="rounded-xl border border-slate-200 bg-transparent p-5 text-[15px] outline-none transition placeholder:text-slate-400 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/5 resize-none" />
                   </div>
-                  
+
                   <button type="submit" disabled={isSubmitting} className="w-full h-14 mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-blue font-bold text-[16px] text-white transition-all hover:bg-brand-blue-dark disabled:opacity-50 shadow-[0_8px_20px_rgba(37,99,235,0.25)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.35)]">
                     {isSubmitting ? 'Đang kết nối chuyên gia...' : (<><span>Gửi yêu cầu tư vấn</span><Send className="h-5 w-5" /></>)}
                   </button>
@@ -1162,14 +1002,14 @@ export default function LandingPage() {
           <p className="mt-6 text-[16px] text-slate-500 leading-relaxed max-w-2xl mx-auto">
             Liên hệ ngay để nhận lộ trình tư vấn chuyển đổi số chi tiết từ chuyên gia, hoặc đăng ký để không bỏ lỡ các xu hướng công nghệ mới nhất.
           </p>
-          
+
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Primary Action */}
             <a onClick={() => scrollTo('contact')} className="w-full sm:w-auto cursor-pointer inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-brand-blue px-8 text-[15px] font-bold text-white transition-all hover:bg-brand-blue-dark shadow-[0_8px_20px_rgba(37,99,235,0.25)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.35)] hover:-translate-y-0.5">
               <span>Liên hệ chuyên gia</span>
               <ArrowRight className="h-4 w-4" />
             </a>
-            
+
             <div className="w-full sm:w-auto">
               {isSuccessNews ? (
                 <div className="flex h-14 items-center justify-center bg-emerald-50 border border-emerald-100 text-emerald-600 text-[14px] font-bold px-6 rounded-xl animate-fade-in">
@@ -1227,7 +1067,7 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Mail className="h-4 w-4 shrink-0 text-brand-blue-light" />
-                  <a href="mailto:Cs@madx.vn" className="transition hover:text-white">Cs@madx.vn</a>
+                  <a href="mailto:cs@madx.com.vn" className="transition hover:text-white">cs@madx.com.vn</a>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <Phone className="h-4 w-4 shrink-0 text-brand-blue-light mt-1" />

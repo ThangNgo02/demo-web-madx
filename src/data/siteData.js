@@ -703,20 +703,20 @@ export const aboutContent = {
 };
 
 export const resourceBlogs = [
-  {
-    id: 'tech-dd-guide',
-    title: 'Hướng dẫn đánh giá hạ tầng IT/OT trước khi gọi vốn cho doanh nghiệp',
-    category: 'Tech Due Diligence',
-    excerpt: 'Làm thế nào để tránh các nợ công nghệ (Tech Debt) và lỗ hổng bảo mật làm giảm định giá của startup...',
-    date: '2026-06-12'
-  },
-  {
-    id: 'wms-optimization',
-    title: 'Tối ưu hóa quản lý kho bãi: Phương pháp giảm 80% thời gian kiểm kê',
-    category: 'Logistics & WMS',
-    excerpt: 'Khám phá cách áp dụng Barcode/RFID kết hợp với thuật toán AI rebalancing để tối ưu hóa vị trí hàng hóa...',
-    date: '2026-06-15'
-  },
+  // {
+  //   id: 'tech-dd-guide',
+  //   title: 'Hướng dẫn đánh giá hạ tầng IT/OT trước khi gọi vốn cho doanh nghiệp',
+  //   category: 'Tech Due Diligence',
+  //   excerpt: 'Làm thế nào để tránh các nợ công nghệ (Tech Debt) và lỗ hổng bảo mật làm giảm định giá của startup...',
+  //   date: '2026-06-12'
+  // },
+  // {
+  //   id: 'wms-optimization',
+  //   title: 'Tối ưu hóa quản lý kho bãi: Phương pháp giảm 80% thời gian kiểm kê',
+  //   category: 'Logistics & WMS',
+  //   excerpt: 'Khám phá cách áp dụng Barcode/RFID kết hợp với thuật toán AI rebalancing để tối ưu hóa vị trí hàng hóa...',
+  //   date: '2026-06-15'
+  // },
   {
     id: 'headless-commerce',
     title: 'Tại sao Headless Commerce là tương lai của các ông lớn bán lẻ?',
